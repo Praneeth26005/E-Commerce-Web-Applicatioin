@@ -21,6 +21,5 @@ Admin panel (optional)
 Mobile-friendly design
 # Technologies Used
 Frontend: HTML, CSS, JS
-Backend: Python (Django/Flask) or PHP or Node.js
-Database: SQLite / MySQL / PostgreSQL
+Database: MySQL 
 Tools: VS Code, GitHub
