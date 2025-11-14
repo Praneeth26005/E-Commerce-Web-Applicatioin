@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Home - Simple Shop{% endblock %}
+{% block content %}
+<h1>Latest Products</h1>
+<div class="grid">
+  {% for p in products %}
+    <div class="card">
+      <img src="{{ p['image_url'] or '/static/placeholder.png' }}" alt="{{ p['title'] }}">
+      <h3>{{ p['title'] }}</h3>
+      <p class="muted">₹{{ "%.2f"|format(p['price']) }}</p>
+      <p>{{ p['description'][:90] }}{% if p['description']|length > 90 %}...{% endif %}</p>
+      <a class="btn" href="{{ url_for('product', pid=p['product_id']) }}">View</a>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
