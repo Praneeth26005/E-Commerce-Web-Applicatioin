@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Admin — Add Product</h1>
+<form method="post">
+  <label>Admin password: <input type="password" name="secret" required></label>
+  <label>Title: <input type="text" name="title" required></label>
+  <label>Price (₹): <input type="number" step="0.01" name="price" required></label>
+  <label>Stock: <input type="number" name="stock" value="10"></label>
+  <label>Image URL: <input type="text" name="image_url"></label>
+  <label>Description: <textarea name="description"></textarea></label>
+  <button class="btn" type="submit">Add Product</button>
+</form>
+<p>Admin password is read from environment variable <code>ECO_ADMIN_PASS</code> (default: <em>adminpass</em>).</p>
+{% endblock %}
